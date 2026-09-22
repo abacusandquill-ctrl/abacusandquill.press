@@ -102,14 +102,23 @@
     </p>
   </div>
 
-  <script>
-    const button = document.getElementById('contactButton');
-    const email = document.getElementById('email');
+<script>
+  const button = document.getElementById('contactButton');
+  const email = document.getElementById('email');
 
-    button.addEventListener('click', () => {
-      email.classList.toggle('visible');
-    });
-  </script>
+  button.addEventListener('click', (event) => {
+    event.stopPropagation();
+    email.classList.toggle('visible');
+  });
+
+  email.addEventListener('click', (event) => {
+    event.stopPropagation();
+  });
+
+  document.addEventListener('click', () => {
+    email.classList.remove('visible');
+  });
+</script>
 
 </body>
 </html>
