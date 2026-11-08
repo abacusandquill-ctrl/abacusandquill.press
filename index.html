@@ -657,6 +657,51 @@
 
     const cover = document.getElementById('sandoloCover');
     const publicationDate = document.getElementById('publicationDate');
+    const carousel = document.getElementById('bookCarousel');
+    const track = document.getElementById('carouselTrack');
+    const haniCard = document.getElementById('haniCard');
+    const sandoloDetails = document.getElementById('about-the-story');
+    const quickAction = document.getElementById('quickAction');
+    const haniDetails = document.getElementById('haniDetails');
+    const returnToSandolo = document.getElementById('returnToSandolo');
+
+    let currentBook = 'sandolo';
+    function showBook(which) {
+      currentBook = which;
+      const isHani = which === 'hani';
+      const cardWidth = document.getElementById('sandoloCard').getBoundingClientRect().width;
+      track.style.transform = isHani ? 'translateX(-' + (cardWidth + 16) + 'px)' : 'translateX(0px)';
+      carousel.classList.toggle('is-hani', isHani);
+      publicationDate.hidden = isHani;
+      quickAction.hidden = isHani;
+      sandoloDetails.hidden = isHani;
+      haniDetails.hidden = !isHani;
+      haniCard.setAttribute('aria-current', isHani ? 'true' : 'false');
+    }
+    haniCard.addEventListener('click', event => {
+      event.preventDefault();
+      showBook('hani');
+    });
+    returnToSandolo.addEventListener('click', () => {
+      showBook('sandolo');
+      haniCard.focus({preventScroll: true});
+    });
+    window.addEventListener('resize', () => showBook(currentBook));
+    carousel.addEventListener('keydown', event => {
+      if (event.key === 'ArrowRight') { event.preventDefault(); showBook('hani'); }
+      if (event.key === 'ArrowLeft') { event.preventDefault(); showBook('sandolo'); }
+    });
+    let touchStartX = null;
+    carousel.addEventListener('touchstart', event => {
+      touchStartX = event.changedTouches[0].clientX;
+    }, {passive: true});
+    carousel.addEventListener('touchend', event => {
+      if (touchStartX === null) return;
+      const delta = event.changedTouches[0].clientX - touchStartX;
+      if (delta < -55) showBook('hani');
+      if (delta > 55) showBook('sandolo');
+      touchStartX = null;
+    }, {passive: true});
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
