@@ -359,6 +359,25 @@
       border-top: 1px solid rgba(232, 224, 208, 0.15);
     }
     .paperback strong { color: #e8e0d0; font-weight: normal; }
+
+    /* A truthful glimpse of the growing collection; not a product listing. */
+    .collection-next {
+      width: min(560px, 100%);
+      margin: 4rem auto 0;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(232, 224, 208, 0.25);
+      text-align: left;
+    }
+    .collection-next h3 {
+      margin: 0 0 1rem;
+      color: #e8e0d0;
+      font-size: 1.1rem;
+      font-weight: normal;
+      line-height: 1.5;
+    }
+    .collection-next p { margin: 0 0 0.75rem; }
+    .collection-next em { color: #e8e0d0; }
+    .collection-next .status { font-size: 0.94rem; }
     .reminder-label { color: #e8e0d0; font-size: 0.98rem; margin-bottom: 0.75rem; }
     .reminder-links { display: flex; flex-wrap: wrap; gap: 0.75rem; }
     .reminder-links a {
@@ -509,6 +528,14 @@
         </div>
       </div>
     </div>
+
+    <section class="collection-next" aria-labelledby="collection-next-title">
+      <h3 id="collection-next-title">The Tiny Blue Star collection is just beginning.</h3>
+      <p>Another standalone story is taking shape:<br>
+        <em>Hani the Great, Windcatcher of Jedo</em>
+      </p>
+      <p class="status">In development. Publication date not yet announced.</p>
+    </section>
   </section>
 
   <script>
