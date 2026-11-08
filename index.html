@@ -173,7 +173,7 @@
     }
 
     h1 {
-      font-size: 1.4rem;
+      font-size: clamp(2rem, 4.2vw, 2.8rem);
       font-weight: normal;
       letter-spacing: 0.15em;
       text-transform: uppercase;
@@ -330,6 +330,17 @@
       aspect-ratio: 2 / 3;
       box-sizing: border-box;
     }
+    .sandolo-card {
+      padding: 0;
+      border: 0;
+      background: none;
+      cursor: pointer;
+      opacity: 1;
+      transition: opacity .3s ease;
+    }
+    .sandolo-card:focus-visible { outline: 2px solid #e9d9b6; outline-offset: -3px; }
+    .is-hani .sandolo-card { opacity: .58; }
+    .is-hani .sandolo-card:hover, .is-hani .sandolo-card:focus-visible { opacity: 1; }
     .hani-card {
       border: 1px solid rgba(232,224,208,.32);
       background: linear-gradient(135deg, #20232a 0%, #11151b 80%);
@@ -344,7 +355,7 @@
     }
     .hani-card:hover, .hani-card:focus-visible, .is-hani .hani-card { opacity: 1; }
     .hani-card:focus-visible { outline: 2px solid #e9d9b6; outline-offset: -4px; }
-    .hani-cover-type { font-size: 1.17rem; line-height: 1.6; letter-spacing: .03em; }
+    .hani-cover-type { font-size: clamp(1.5rem, 4vw, 1.85rem); line-height: 1.38; letter-spacing: .015em; }
     .hani-peek-cue {
       position: absolute;
       left: 12px;
@@ -362,7 +373,8 @@
       text-align: center;
     }
     .hani-details p { margin: 0 0 0.6rem; }
-    .hani-details .hani-coming { color: #e8e0d0; font-size: 1.1rem; }
+    .hani-details h3 { color: #e8e0d0; font-size: clamp(1.5rem, 4.2vw, 2rem); line-height: 1.35; font-weight: normal; margin: 0 0 1rem; }
+    .hani-details .hani-coming { color: #e8e0d0; font-size: 1.02rem; letter-spacing: .06em; text-transform: uppercase; }
     .return-to-sandolo {
       margin-top: 1.8rem;
       border: 0;
@@ -566,7 +578,7 @@
 
     <div class="carousel-viewport" id="bookCarousel" role="region" aria-roledescription="carousel" aria-label="Books in The Tiny Blue Star universe">
       <div class="carousel-track" id="carouselTrack">
-        <div class="carousel-card" id="sandoloCard">
+        <button type="button" class="carousel-card sandolo-card" id="sandoloCard" aria-label="View The Flying Sandolo">
           <img
             src="sandolo-cover.png"
             alt="Cover of The Flying Sandolo by MPK Jensen"
@@ -574,7 +586,7 @@
             class="sandolo-cover"
             id="sandoloCover"
           >
-        </div>
+        </button>
         <a class="carousel-card hani-card" id="haniCard"
            href="/the-tiny-blue-star/#hani"
            aria-label="Preview Hani the Great, Windcatcher of Jedo — coming soon">
@@ -627,9 +639,9 @@
     </div>
 
     <div class="hani-details" id="haniDetails" hidden aria-live="polite">
+      <h3>Hani the Great, Windcatcher of Jedo</h3>
       <p class="hani-coming">Coming soon</p>
       <p>Publication date to be announced.</p>
-      <button type="button" class="return-to-sandolo" id="returnToSandolo">← The Flying Sandolo</button>
     </div>
   </section>
 
@@ -660,17 +672,20 @@
     const carousel = document.getElementById('bookCarousel');
     const track = document.getElementById('carouselTrack');
     const haniCard = document.getElementById('haniCard');
+    const sandoloCard = document.getElementById('sandoloCard');
     const sandoloDetails = document.getElementById('about-the-story');
     const quickAction = document.getElementById('quickAction');
     const haniDetails = document.getElementById('haniDetails');
-    const returnToSandolo = document.getElementById('returnToSandolo');
-
     let currentBook = 'sandolo';
     function showBook(which) {
       currentBook = which;
       const isHani = which === 'hani';
-      const cardWidth = document.getElementById('sandoloCard').getBoundingClientRect().width;
-      track.style.transform = isHani ? 'translateX(-' + (cardWidth + 16) + 'px)' : 'translateX(0px)';
+      const cardWidth = sandoloCard.getBoundingClientRect().width;
+      const gap = parseFloat(getComputedStyle(track).columnGap) || 16;
+      // Keep a visible, clickable sliver of Sandolo at the left when Hani is selected.
+      const leftPeek = Math.max(38, Math.min(58, (carousel.clientWidth - cardWidth) / 2));
+      const offset = Math.max(0, cardWidth + gap - leftPeek);
+      track.style.transform = isHani ? 'translateX(-' + offset + 'px)' : 'translateX(0px)';
       carousel.classList.toggle('is-hani', isHani);
       publicationDate.hidden = isHani;
       quickAction.hidden = isHani;
@@ -682,10 +697,7 @@
       event.preventDefault();
       showBook('hani');
     });
-    returnToSandolo.addEventListener('click', () => {
-      showBook('sandolo');
-      haniCard.focus({preventScroll: true});
-    });
+    sandoloCard.addEventListener('click', () => showBook('sandolo'));
     window.addEventListener('resize', () => showBook(currentBook));
     carousel.addEventListener('keydown', event => {
       if (event.key === 'ArrowRight') { event.preventDefault(); showBook('hani'); }
