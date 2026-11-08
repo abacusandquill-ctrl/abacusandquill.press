@@ -24,12 +24,11 @@
       "publisher": "Abacus & Quill",
       "book_url": "https://abacusandquill.press/the-flying-sandolo/",
       "cover_url": "https://abacusandquill.press/sandolo-cover.png",
-      "description": "In Plucords, it rains every day. Elyssa and her dog Taki discover a flying boat that carries them above the clouds, where she can finally see the moon.",
+      "description": "In Plucords, it rains every day.\n\nIt rains so much that the houses stand on stilts, children wear goggles to school, and every family keeps a boat for the flooded streets. Elyssa has tried to get used to it since moving there with her father and Taki, her dog, after her mother died. But she still misses the sun. She misses dry things. Most of all, she misses the moon.\n\nThen one night, the sandolo appears outside Elyssa's window, floating in midair. It carries her above the clouds, where she can finally see the moon.\n\nWhat she finds there — and what finds her — fell for five thousand years before it arrived.",
       "formats": [
         {
           "id": "kindle",
           "name": "Kindle ebook",
-          "media_type": "application/epub+zip",
           "isbn": "979-8-9962708-1-1",
           "price": {
             "amount": "9.99",
@@ -40,7 +39,9 @@
           "release_date": "2026-12-18",
           "purchase_url": "https://www.amazon.com/dp/B0HQP52RWK",
           "checkout_mode": "retailer_handoff",
-          "automatic_order_placement": false
+          "automatic_order_placement": false,
+          "asin": "B0HQP52RWK",
+          "product_format": "Kindle ebook"
         },
         {
           "id": "paperback",
@@ -57,7 +58,9 @@
           "checkout_mode": "not_available_yet",
           "automatic_order_placement": false
         }
-      ]
+      ],
+      "collection": "The Tiny Blue Star",
+      "reading_order_required": false
     }
   ]
 }
