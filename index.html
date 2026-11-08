@@ -53,10 +53,18 @@
         "name": "MPK Jensen"
       },
       {
+        "@type": "BookSeries",
+        "@id": "https://abacusandquill.press/#tiny-blue-star-series",
+        "name": "The Tiny Blue Star",
+        "url": "https://abacusandquill.press/#the-tiny-blue-star",
+        "hasPart": {"@id": "https://abacusandquill.press/#the-flying-sandolo"}
+      },
+      {
         "@type": "Book",
         "@id": "https://abacusandquill.press/#the-flying-sandolo",
         "name": "The Flying Sandolo",
         "url": "https://abacusandquill.press/the-flying-sandolo/",
+        "isPartOf": {"@id": "https://abacusandquill.press/#tiny-blue-star-series"},
         "description": "An imaginative children’s adventure combining atmospheric beauty, a richly inhabited rain-soaked town, a flying boat, science and enchantment, coziness, tenderness, courage, and a little blue star.",
         "image": "https://abacusandquill.press/sandolo-cover.png",
         "author": {
@@ -277,6 +285,26 @@
     }
 
 
+    /* Quiet series identity, without chapter numbering or sequel expectations. */
+    .series-marker {
+      margin-bottom: 1.65rem;
+      font-size: 0.88rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #e8e0d0;
+    }
+    .series-context {
+      margin-top: 1.4rem;
+      max-width: 380px;
+      font-size: 0.91rem;
+      line-height: 1.7;
+      color: #b0a898;
+    }
+    .series-context strong {
+      font-weight: normal;
+      color: #e8e0d0;
+    }
+
     /* The reader's doorway; the original two-moment design stays intact. */
     .discover-link {
       display: inline-block;
@@ -397,7 +425,7 @@
         Beautiful books for curious young readers —<br>
         and for those who once were.
       </p>
-      <a class="discover-link" href="#the-flying-sandolo">The Flying Sandolo <span aria-hidden="true">↓</span></a>
+      <a class="discover-link" href="#the-flying-sandolo">Discover The Tiny Blue Star</a>
     </div>
   </section>
 
@@ -419,6 +447,8 @@
       </dl>
     </div>
 
+    <p class="series-marker" id="the-tiny-blue-star">The Tiny Blue Star</p>
+
     <img
       src="sandolo-cover.png"
       alt="Cover of The Flying Sandolo by MPK Jensen"
@@ -429,6 +459,7 @@
     <div class="publication-date" id="publicationDate">
       Coming <time datetime="2026-12-18">December 18, 2026</time>
     </div>
+    <p class="series-context">Five elements. Five standalone stories.<br><strong>No reading order required.</strong></p>
 
     <div class="sandolo-details" id="about-the-story">
       <h3>In Plucords, it rains every day.</h3>
