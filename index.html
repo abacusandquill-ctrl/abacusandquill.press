@@ -309,7 +309,7 @@
     .carousel-viewport {
       --card-width: min(315px, 74vw);
       width: min(400px, calc(100vw - 16px));
-      max-width: 100%;
+      max-width: none;
       overflow: hidden;
       margin: 0 auto;
       text-align: left;
@@ -340,6 +340,17 @@
     }
     .sandolo-card:focus-visible { outline: 2px solid #e9d9b6; outline-offset: -3px; }
     .is-hani .sandolo-card { opacity: .58; }
+    .is-hani .sandolo-card::after {
+      content: '‹';
+      position: absolute;
+      right: 7px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      font: 2.2rem/1 Georgia, serif;
+      text-shadow: 0 1px 8px #132338;
+      pointer-events: none;
+    }
     .is-hani .sandolo-card:hover, .is-hani .sandolo-card:focus-visible { opacity: 1; }
     .hani-card {
       border: 1px solid rgba(232,224,208,.32);
@@ -682,9 +693,9 @@
       const isHani = which === 'hani';
       const cardWidth = sandoloCard.getBoundingClientRect().width;
       const gap = parseFloat(getComputedStyle(track).columnGap) || 16;
-      // Keep a visible, clickable sliver of Sandolo at the left when Hani is selected.
-      const leftPeek = Math.max(38, Math.min(58, (carousel.clientWidth - cardWidth) / 2));
-      const offset = Math.max(0, cardWidth + gap - leftPeek);
+      // Keep a visible, clickable Sandolo sliver on the left, and breathing room on the right.
+      const leftPeek = Math.max(24, Math.min(58, (carousel.clientWidth - cardWidth - gap) / 2));
+      const offset = Math.max(0, cardWidth - leftPeek);
       track.style.transform = isHani ? 'translateX(-' + offset + 'px)' : 'translateX(0px)';
       carousel.classList.toggle('is-hani', isHani);
       publicationDate.hidden = isHani;
