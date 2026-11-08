@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Flying Sandolo by MPK Jensen | Abacus &amp; Quill</title>
-  <meta name="description" content="Official site of Abacus &amp; Quill, publisher of The Flying Sandolo by MPK Jensen, planned for publication December 18, 2026.">
+  <meta name="description" content="The Flying Sandolo by MPK Jensen: a girl, her dog, a rain-soaked town, and a flying boat. Kindle pre-order available now; paperback December 18, 2026.">
   <meta name="author" content="MPK Jensen">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="https://abacusandquill.press/">
@@ -12,7 +12,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Abacus &amp; Quill">
   <meta property="og:title" content="The Flying Sandolo by MPK Jensen | Abacus &amp; Quill">
-  <meta property="og:description" content="Official site of Abacus &amp; Quill, publisher of The Flying Sandolo by MPK Jensen, planned for publication December 18, 2026.">
+  <meta property="og:description" content="The Flying Sandolo by MPK Jensen: a girl, her dog, a rain-soaked town, and a flying boat. Kindle pre-order available now; paperback December 18, 2026.">
   <meta property="og:url" content="https://abacusandquill.press/">
   <meta property="og:image" content="https://abacusandquill.press/sandolo-cover.png">
   <meta property="og:image:secure_url" content="https://abacusandquill.press/sandolo-cover.png">
@@ -23,7 +23,7 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="The Flying Sandolo by MPK Jensen | Abacus &amp; Quill">
-  <meta name="twitter:description" content="Official site of Abacus &amp; Quill, publisher of The Flying Sandolo by MPK Jensen, planned for publication December 18, 2026.">
+  <meta name="twitter:description" content="The Flying Sandolo by MPK Jensen: a girl, her dog, a rain-soaked town, and a flying boat. Kindle pre-order available now; paperback December 18, 2026.">
   <meta name="twitter:image" content="https://abacusandquill.press/sandolo-cover.png">
   <meta name="twitter:image:alt" content="Cover of The Flying Sandolo by MPK Jensen">
 
@@ -106,6 +106,13 @@
         "url": "https://abacusandquill.press/the-flying-sandolo/",
         "isbn": "979-8-9962708-1-1",
         "bookFormat": "https://schema.org/EBook",
+        "offers": {
+          "@type": "Offer",
+          "url": "https://www.amazon.com/dp/B0HQP52RWK",
+          "price": "9.99",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/PreOrder"
+        },
         "datePublished": "2026-12-18",
         "inLanguage": "en",
         "author": {
@@ -267,6 +274,65 @@
       opacity: 1;
     }
 
+
+    /* The reader's doorway; the original two-moment design stays intact. */
+    .discover-link {
+      display: inline-block;
+      margin-top: 2.5rem;
+      color: #e8e0d0;
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-underline-offset: 0.35em;
+    }
+    .sandolo-details {
+      width: min(560px, 100%);
+      margin: 3.5rem auto 0;
+      text-align: left;
+    }
+    .sandolo-details h3 {
+      color: #e8e0d0;
+      font-size: 1.2rem;
+      font-weight: normal;
+      line-height: 1.5;
+      margin: 0 0 1.1rem;
+    }
+    .sandolo-details p { margin: 0 0 1.15rem; color: #cec6b8; }
+    .reader-actions {
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(232, 224, 208, 0.25);
+    }
+    .kindle-link {
+      display: inline-block;
+      padding: 0.9rem 1.25rem;
+      background: #e9d9b6;
+      color: #101a2a;
+      font-size: 0.98rem;
+      line-height: 1.4;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 3px;
+    }
+    .kindle-link:hover, .kindle-link:focus-visible { background: #fff0c9; }
+    .reader-actions .delivery-note { font-size: 0.9rem; margin: 0.8rem 0 2.2rem; }
+    .paperback {
+      padding: 1.6rem 0 0;
+      border-top: 1px solid rgba(232, 224, 208, 0.15);
+    }
+    .paperback strong { color: #e8e0d0; font-weight: normal; }
+    .reminder-links a { color: #e8e0d0; text-underline-offset: 0.2em; }
+    .reminder-links .separator { margin: 0 0.6rem; color: #898174; }
+    .reader-actions a:focus-visible, .discover-link:focus-visible {
+      outline: 2px solid #e9d9b6;
+      outline-offset: 4px;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .sandolo-cover, .publication-date {
+        opacity: 1; transform: none; transition: none;
+      }
+    }
+
     @media (max-width: 600px) {
       .contact {
         top: 1.25rem;
@@ -311,6 +377,7 @@
         Beautiful books for curious young readers —<br>
         and for those who once were.
       </p>
+      <a class="discover-link" href="#the-flying-sandolo">The Flying Sandolo <span aria-hidden="true">↓</span></a>
     </div>
   </section>
 
@@ -341,6 +408,37 @@
 
     <div class="publication-date" id="publicationDate">
       Coming <time datetime="2026-12-18">December 18, 2026</time>
+    </div>
+
+    <div class="sandolo-details" id="about-the-story">
+      <h3>In Plucords, it rains every day.</h3>
+      <p>
+        It rains so much that the houses stand on stilts, children wear goggles to school,
+        and every family keeps a boat for the flooded streets. Elyssa has tried to get used
+        to it since moving there with her father and Taki, her dog, after her mother died.
+        But she still misses the sun. She misses dry things. Most of all, she misses the moon.
+      </p>
+      <p>
+        Then one night, the sandolo appears outside Elyssa's window, floating in midair.
+        It carries her above the clouds, where she can finally see the moon.
+      </p>
+      <p>
+        What she finds there — and what finds her — fell for five thousand years before it arrived.
+      </p>
+      <div class="reader-actions" aria-label="Book availability">
+        <a class="kindle-link" href="https://www.amazon.com/dp/B0HQP52RWK">Pre-order Kindle · $9.99</a>
+        <p class="delivery-note">Delivered <time datetime="2026-12-18">December 18, 2026</time>.</p>
+        <div class="paperback" id="paperback">
+          <p><strong>Prefer paper?</strong> The paperback will be available
+            <time datetime="2026-12-18">December 18, 2026</time> · $13.99 (US).
+          </p>
+          <p class="reminder-links">Add a release-day reminder:
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=The%20Flying%20Sandolo%20paperback%20release&amp;dates=20261218%2F20261219&amp;details=The%20Flying%20Sandolo%20by%20MPK%20Jensen%20is%20scheduled%20for%20paperback%20release%20today.%20Check%20https%3A%2F%2Fabacusandquill.press%2F%20for%20purchase%20options.">Google Calendar</a>
+            <span class="separator" aria-hidden="true">·</span>
+            <a href="/sandolo-paperback-reminder.ics" download>Other calendars</a>
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
