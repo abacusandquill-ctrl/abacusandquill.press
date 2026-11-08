@@ -65,7 +65,7 @@
         "name": "The Flying Sandolo",
         "url": "https://abacusandquill.press/the-flying-sandolo/",
         "isPartOf": {"@id": "https://abacusandquill.press/#tiny-blue-star-series"},
-        "description": "An imaginative children’s adventure combining atmospheric beauty, a richly inhabited rain-soaked town, a flying boat, science and enchantment, coziness, tenderness, courage, and a little blue star.",
+        "description": "In Plucords, it rains every day.\n\nIt rains so much that the houses stand on stilts, children wear goggles to school, and every family keeps a boat for the flooded streets. Elyssa has tried to get used to it since moving there with her father and Taki, her dog, after her mother died. But she still misses the sun. She misses dry things. Most of all, she misses the moon.\n\nThen one night, the sandolo appears outside Elyssa's window, floating in midair. It carries her above the clouds, where she can finally see the moon.\n\nWhat she finds there — and what finds her — fell for five thousand years before it arrived.",
         "image": "https://abacusandquill.press/sandolo-cover.png",
         "author": {
           "@id": "https://abacusandquill.press/#author-mpk-jensen"
@@ -139,6 +139,7 @@
   }
   </script>
 
+  <script>if ('IntersectionObserver' in window) document.documentElement.classList.add('js');</script>
   <style>
     * {
       margin: 0;
@@ -252,8 +253,8 @@
       height: auto;
       display: block;
 
-      opacity: 0;
-      transform: translateY(35px);
+      opacity: 1;
+      transform: translateY(0);
 
       transition:
         opacity 1.4s ease,
@@ -262,6 +263,11 @@
       box-shadow:
         0 0 30px rgba(255, 235, 190, 0.10),
         0 0 80px rgba(255, 235, 190, 0.06);
+    }
+
+    .js .sandolo-cover {
+      opacity: 0;
+      transform: translateY(35px);
     }
 
     .sandolo-cover.revealed {
@@ -276,9 +282,11 @@
       text-transform: uppercase;
       color: #b0a898;
 
-      opacity: 0;
+      opacity: 1;
       transition: opacity 1.4s ease 0.4s;
     }
+
+    .js .publication-date { opacity: 0; }
 
     .publication-date.revealed {
       opacity: 1;
@@ -301,6 +309,10 @@
       color: #b0a898;
     }
     .series-marker em { color: #e8e0d0; }
+
+    .book-byline { font-size: 1rem; letter-spacing: 0.015em; color: #b0a898; margin: 0.05rem 0 0.85rem; }
+    .quick-action { margin-top: 1.3rem; }
+    .quick-action .kindle-link { font-size: 1rem; }
 
     /* The reader's doorway; the original two-moment design stays intact. */
     .discover-link {
@@ -373,7 +385,7 @@
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      .sandolo-cover, .publication-date {
+      .sandolo-cover, .publication-date, .js .sandolo-cover, .js .publication-date {
         opacity: 1; transform: none; transition: none;
       }
     }
@@ -444,18 +456,21 @@
     </div>
 
     <h2 id="sandoloTitle" class="featured-book-title">The Flying Sandolo</h2>
-    <p class="series-marker" id="the-tiny-blue-star">A standalone novel in <em>The Tiny Blue Star</em> series</p>
+    <p class="book-byline">A novel by MPK Jensen</p>
+    <p class="series-marker" id="the-tiny-blue-star">A standalone novel from <em>The Tiny Blue Star</em> collection</p>
 
     <img
       src="sandolo-cover.png"
       alt="Cover of The Flying Sandolo by MPK Jensen"
+      width="1200" height="1800"
       class="sandolo-cover"
       id="sandoloCover"
     >
 
     <div class="publication-date" id="publicationDate">
-      Coming <time datetime="2026-12-18">December 18, 2026</time>
+      Releases <time datetime="2026-12-18">December 18, 2026</time>
     </div>
+    <p class="quick-action"><a class="kindle-link" href="https://www.amazon.com/dp/B0HQP52RWK">Pre-order Kindle · $9.99</a></p>
 
     <div class="sandolo-details" id="about-the-story">
       <h3>In Plucords, it rains every day.</h3>
@@ -472,20 +487,20 @@
       <p>
         What she finds there — and what finds her — fell for five thousand years before it arrived.
       </p>
-      <div class="reader-actions" aria-label="Book availability">
+      <div class="reader-actions" role="group" aria-label="Book purchase and release information">
         <a class="kindle-link" href="https://www.amazon.com/dp/B0HQP52RWK">Pre-order Kindle · $9.99</a>
         <p class="delivery-note">Delivered <time datetime="2026-12-18">December 18, 2026</time>.</p>
         <div class="paperback" id="paperback">
           <p><strong>Prefer paper?</strong> The paperback will be available
             <time datetime="2026-12-18">December 18, 2026</time> · $13.99 (US).
           </p>
-          <p class="reminder-label">📅 Remind me on release day:</p>
+          <p class="reminder-label">📅 Add the paperback release date to your calendar:</p>
           <div class="reminder-links">
-            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=The%20Flying%20Sandolo%20paperback%20release&amp;dates=20261218%2F20261219&amp;details=The%20Flying%20Sandolo%20by%20MPK%20Jensen%20is%20scheduled%20for%20paperback%20release%20today.%20Check%20https%3A%2F%2Fabacusandquill.press%2F%20for%20purchase%20options.">
+            <a aria-label="Add the paperback release date to Google Calendar" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=The%20Flying%20Sandolo%20paperback%20release&amp;dates=20261218%2F20261219&amp;details=The%20Flying%20Sandolo%20by%20MPK%20Jensen%20is%20scheduled%20for%20paperback%20release%20today.%20Check%20https%3A%2F%2Fabacusandquill.press%2F%20for%20purchase%20options.">
               <svg class="calendar-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18"/><path d="m8 15 2.5 2.5 5-5"/></svg>
               <span>Google Calendar</span>
             </a>
-            <a href="/sandolo-paperback-reminder.ics" download>
+            <a aria-label="Download paperback release date for Apple, Outlook or another calendar" href="/sandolo-paperback-reminder.ics" download>
               <svg class="calendar-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18"/><path d="m8 15 2.5 2.5 5-5"/></svg>
               <span>Apple, Outlook &amp; others</span>
             </a>
