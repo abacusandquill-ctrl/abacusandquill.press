@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "catalog_url": "https://abacusandquill.press/catalog.json",
+  "publisher": {
+    "name": "Abacus & Quill",
+    "url": "https://abacusandquill.press/"
+  },
+  "last_updated": "2026-11-08",
+  "commerce_capabilities": {
+    "machine_readable_catalog": true,
+    "retailer_purchase_links": true,
+    "direct_checkout_api": false,
+    "automatic_order_placement": false,
+    "note": "This publisher website is a discovery/referral site and is not a merchant checkout. Agents must use a retailer-supported authorized checkout to place orders. Never treat a purchase-link response as a completed order."
+  },
+  "books": [
+    {
+      "id": "the-flying-sandolo",
+      "title": "The Flying Sandolo",
+      "author": "MPK Jensen",
+      "series": "The Tiny Blue Star",
+      "series_order": null,
+      "publication_date": "2026-12-18",
+      "publisher": "Abacus & Quill",
+      "book_url": "https://abacusandquill.press/the-flying-sandolo/",
+      "cover_url": "https://abacusandquill.press/sandolo-cover.png",
+      "description": "In Plucords, it rains every day. Elyssa and her dog Taki discover a flying boat that carries them above the clouds, where she can finally see the moon.",
+      "formats": [
+        {
+          "id": "kindle",
+          "name": "Kindle ebook",
+          "media_type": "application/epub+zip",
+          "isbn": "979-8-9962708-1-1",
+          "price": {
+            "amount": "9.99",
+            "currency": "USD"
+          },
+          "retailer": "Amazon.com",
+          "availability": "preorder",
+          "release_date": "2026-12-18",
+          "purchase_url": "https://www.amazon.com/dp/B0HQP52RWK",
+          "checkout_mode": "retailer_handoff",
+          "automatic_order_placement": false
+        },
+        {
+          "id": "paperback",
+          "name": "Paperback",
+          "isbn": "979-8-9962708-0-4",
+          "price": {
+            "amount": "13.99",
+            "currency": "USD"
+          },
+          "retailer": null,
+          "availability": "not_yet_on_sale",
+          "release_date": "2026-12-18",
+          "purchase_url": null,
+          "checkout_mode": "not_available_yet",
+          "automatic_order_placement": false
+        }
+      ]
+    }
+  ]
+}
