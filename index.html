@@ -559,22 +559,35 @@
       </dl>
     </div>
 
-    <h2 id="sandoloTitle" class="featured-book-title">The Flying Sandolo</h2>
-    <p class="book-byline">A novel by MPK Jensen</p>
-    <p class="series-marker" id="the-tiny-blue-star">A standalone novel from <em>The Tiny Blue Star</em> collection</p>
+    <h2 id="sandoloTitle" class="visually-hidden">The Flying Sandolo by MPK Jensen</h2>
+    <a class="universe-link" id="the-tiny-blue-star" href="/the-tiny-blue-star/">
+      Explore The Tiny Blue Star universe <span aria-hidden="true">↗</span>
+    </a>
 
-    <img
-      src="sandolo-cover.png"
-      alt="Cover of The Flying Sandolo by MPK Jensen"
-      width="1200" height="1800"
-      class="sandolo-cover"
-      id="sandoloCover"
-    >
+    <div class="carousel-viewport" id="bookCarousel" role="region" aria-roledescription="carousel" aria-label="Books in The Tiny Blue Star universe">
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-card" id="sandoloCard">
+          <img
+            src="sandolo-cover.png"
+            alt="Cover of The Flying Sandolo by MPK Jensen"
+            width="1200" height="1800"
+            class="sandolo-cover"
+            id="sandoloCover"
+          >
+        </div>
+        <a class="carousel-card hani-card" id="haniCard"
+           href="/the-tiny-blue-star/#hani"
+           aria-label="Preview Hani the Great, Windcatcher of Jedo — coming soon">
+          <span class="hani-peek-cue" aria-hidden="true">›</span>
+          <span class="hani-cover-type">Hani the Great,<br>Windcatcher of Jedo</span>
+        </a>
+      </div>
+    </div>
 
     <div class="publication-date" id="publicationDate">
       Releases <time datetime="2026-12-18">December 18, 2026</time>
     </div>
-    <p class="quick-action"><a class="kindle-link" href="https://www.amazon.com/dp/B0HQP52RWK">Pre-order Kindle · $9.99</a></p>
+    <p class="quick-action" id="quickAction"><a class="kindle-link" href="https://www.amazon.com/dp/B0HQP52RWK">Pre-order Kindle · $9.99</a></p>
 
     <div class="sandolo-details" id="about-the-story">
       <h3>In Plucords, it rains every day.</h3>
@@ -613,13 +626,11 @@
       </div>
     </div>
 
-    <section class="collection-next" aria-labelledby="collection-next-title">
-      <h3 id="collection-next-title">The Tiny Blue Star collection is just beginning.</h3>
-      <p>Another standalone story is taking shape:<br>
-        <em>Hani the Great, Windcatcher of Jedo</em>
-      </p>
-      <p class="status">In development. Publication date not yet announced.</p>
-    </section>
+    <div class="hani-details" id="haniDetails" hidden aria-live="polite">
+      <p class="hani-coming">Coming soon</p>
+      <p>Publication date to be announced.</p>
+      <button type="button" class="return-to-sandolo" id="returnToSandolo">← The Flying Sandolo</button>
+    </div>
   </section>
 
   <script>
