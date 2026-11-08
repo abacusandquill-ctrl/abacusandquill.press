@@ -285,25 +285,22 @@
     }
 
 
-    /* Quiet series identity, without chapter numbering or sequel expectations. */
+    /* The book comes first; the series is descriptive context, not a competing title. */
+    .featured-book-title {
+      font-size: 1.35rem;
+      font-weight: normal;
+      letter-spacing: 0.08em;
+      line-height: 1.5;
+      margin-bottom: 0.35rem;
+    }
     .series-marker {
       margin-bottom: 1.65rem;
-      font-size: 0.88rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: #e8e0d0;
-    }
-    .series-context {
-      margin-top: 1.4rem;
-      max-width: 380px;
-      font-size: 0.91rem;
-      line-height: 1.7;
+      font-size: 0.92rem;
+      line-height: 1.6;
+      letter-spacing: 0.015em;
       color: #b0a898;
     }
-    .series-context strong {
-      font-weight: normal;
-      color: #e8e0d0;
-    }
+    .series-marker em { color: #e8e0d0; }
 
     /* The reader's doorway; the original two-moment design stays intact. */
     .discover-link {
@@ -425,7 +422,7 @@
         Beautiful books for curious young readers —<br>
         and for those who once were.
       </p>
-      <a class="discover-link" href="#the-flying-sandolo">Discover The Tiny Blue Star</a>
+      <a class="discover-link" href="#the-flying-sandolo">Discover The Flying Sandolo</a>
     </div>
   </section>
 
@@ -435,7 +432,6 @@
     aria-labelledby="sandoloTitle"
   >
     <div class="visually-hidden">
-      <h2 id="sandoloTitle">The Flying Sandolo</h2>
       <p>By MPK Jensen. Published by Abacus &amp; Quill. Planned publication December 18, 2026.</p>
       <dl>
         <dt>Paperback ISBN</dt>
@@ -447,7 +443,8 @@
       </dl>
     </div>
 
-    <p class="series-marker" id="the-tiny-blue-star">The Tiny Blue Star</p>
+    <h2 id="sandoloTitle" class="featured-book-title">The Flying Sandolo</h2>
+    <p class="series-marker" id="the-tiny-blue-star">A standalone novel in <em>The Tiny Blue Star</em> series</p>
 
     <img
       src="sandolo-cover.png"
@@ -459,7 +456,6 @@
     <div class="publication-date" id="publicationDate">
       Coming <time datetime="2026-12-18">December 18, 2026</time>
     </div>
-    <p class="series-context">Five elements. Five standalone stories.<br><strong>No reading order required.</strong></p>
 
     <div class="sandolo-details" id="about-the-story">
       <h3>In Plucords, it rains every day.</h3>
