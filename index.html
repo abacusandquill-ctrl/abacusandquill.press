@@ -249,7 +249,7 @@
     }
 
     .sandolo-cover {
-      width: min(315px, 75vw);
+      width: 100%;
       height: auto;
       display: block;
 
@@ -292,6 +292,90 @@
       opacity: 1;
     }
 
+
+    /* Optional universe doorway, and a quiet book carousel. */
+    [hidden] { display: none !important; }
+    .universe-link {
+      display: inline-block;
+      margin-bottom: 1.4rem;
+      color: #cfc8be;
+      font-size: 0.91rem;
+      letter-spacing: 0.045em;
+      line-height: 1.6;
+      text-decoration-color: rgba(232,224,208,.48);
+      text-underline-offset: .35em;
+    }
+    .universe-link:hover, .universe-link:focus-visible { color: #fff0d4; }
+    .carousel-viewport {
+      --card-width: min(315px, 74vw);
+      width: min(400px, calc(100vw - 16px));
+      max-width: 100%;
+      overflow: hidden;
+      margin: 0 auto;
+      text-align: left;
+      touch-action: pan-y;
+    }
+    .carousel-track {
+      display: flex;
+      align-items: stretch;
+      gap: 16px;
+      transition: transform .5s ease;
+      will-change: transform;
+    }
+    .carousel-card {
+      position: relative;
+      flex: 0 0 var(--card-width);
+      display: block;
+      width: var(--card-width);
+      aspect-ratio: 2 / 3;
+      box-sizing: border-box;
+    }
+    .hani-card {
+      border: 1px solid rgba(232,224,208,.32);
+      background: linear-gradient(135deg, #20232a 0%, #11151b 80%);
+      color: #e8e0d0;
+      text-align: center;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      opacity: .55;
+    }
+    .hani-card:hover, .hani-card:focus-visible, .is-hani .hani-card { opacity: 1; }
+    .hani-card:focus-visible { outline: 2px solid #e9d9b6; outline-offset: -4px; }
+    .hani-cover-type { font-size: 1.17rem; line-height: 1.6; letter-spacing: .03em; }
+    .hani-peek-cue {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2.2rem;
+      line-height: 1;
+      color: #e8e0d0;
+    }
+    .is-hani .hani-peek-cue { opacity: 0; }
+    .hani-details {
+      margin: 1.8rem auto 0;
+      color: #b0a898;
+      font-size: 1rem;
+      text-align: center;
+    }
+    .hani-details p { margin: 0 0 0.6rem; }
+    .hani-details .hani-coming { color: #e8e0d0; font-size: 1.1rem; }
+    .return-to-sandolo {
+      margin-top: 1.8rem;
+      border: 0;
+      padding: .5rem;
+      background: none;
+      color: #e8e0d0;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      font: inherit;
+      cursor: pointer;
+    }
+    .return-to-sandolo:focus-visible { outline: 2px solid #e9d9b6; }
+    @media (prefers-reduced-motion: reduce) { .carousel-track { transition: none; } }
 
     /* The book comes first; the series is descriptive context, not a competing title. */
     .featured-book-title {
@@ -421,7 +505,7 @@
       }
 
       .sandolo-cover {
-        width: min(315px, 75vw);
+        width: 100%;
       }
     }
   </style>
