@@ -5,12 +5,19 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:the-flying-sandolo-paperback-release-20261218@abacusandquill.press
-DTSTAMP:20261108T120000Z
+DTSTAMP:20261108T170000Z
 DTSTART;VALUE=DATE:20261218
 DTEND;VALUE=DATE:20261219
 SUMMARY:The Flying Sandolo — paperback release
-DESCRIPTION:The Flying Sandolo by MPK Jensen is scheduled for paperback release today. Check abacusandquill.press for purchase options.
+DESCRIPTION:The Flying Sandolo by MPK Jensen is scheduled for paperback rel
+ ease today. Check https://abacusandquill.press/ for purchase options.
 URL:https://abacusandquill.press/
 TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:PT9H
+DESCRIPTION:The Flying Sandolo paperback releases today. Check abacusandqui
+ ll.press for purchase options.
+END:VALARM
 END:VEVENT
 END:VCALENDAR
