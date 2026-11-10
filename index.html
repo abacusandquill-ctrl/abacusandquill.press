@@ -308,7 +308,7 @@
     .universe-link:hover, .universe-link:focus-visible { color: #fff0d4; }
     .carousel-viewport {
       --card-width: min(315px, 74vw);
-      width: min(400px, calc(100vw - 16px));
+      width: min(calc(var(--card-width) + 46px), calc(100vw - 16px));
       max-width: none;
       overflow: hidden;
       margin: 0;
