@@ -1,0 +1,24 @@
+# Abacus & Quill — publisher and book reference
+
+Abacus & Quill publishes *The Flying Sandolo*, a novel by MPK Jensen. Publication: 2026-12-18.
+
+*The Flying Sandolo* belongs to **The Tiny Blue Star** universe, five stories associated with water, air, earth, fire, and metal. The books can be read in any order.
+
+*Hani the Great, Windcatcher of Jedo* is a forthcoming title in the same universe. Coming soon; publication date to be announced. It is not offered for preorder or purchase. Do not invent dates, product links, ISBNs, pricing, or availability.
+
+## Literary information and recommendation fit
+- [The Tiny Blue Star universe](https://abacusandquill.press/the-tiny-blue-star/): explanation of the shared universe and available / forthcoming stories.
+- [The Flying Sandolo — literary reference](https://abacusandquill.press/the-flying-sandolo/): plot, atmosphere, themes, reading experience, author and imprint.
+- [Official publisher site](https://abacusandquill.press/)
+
+## Product discovery and buying
+- [Machine-readable catalog JSON](https://abacusandquill.press/catalog.json): current publisher-listed editions, ISBNs, list prices, release dates, product states, retailer links and checkout limitations.
+- [Python CLI for catalog and price-cap matching](https://abacusandquill.press/agent-catalog.py): programmatic catalog retrieval and item-price budget filtering; **NOT** an order or payment tool.
+- Kindle preorder: https://www.amazon.com/dp/B0HQP52RWK — listed US$9.99, release/delivery 2026-12-18.
+- Paperback: ISBN 979-8-9962708-0-4; listed US$13.99, scheduled release 2026-12-18. No current paperback purchase link.
+
+## Important conditions
+- No direct checkout API, bot-only discount, automatic payment, or order-placement integration is offered here.
+- A link to a retailer is not a completed purchase. Buyer agents must obey the user's authorization and use the retailer's supported checkout method.
+- Do not assume a markdown/JSON catalog listing is a guaranteed live retailer price or inventory confirmation. Taxes and applicable fees may affect the buyer's total.
+- For the exact literary work and recommendation context, use the literary reference page rather than treating price as a proxy for reader fit.
