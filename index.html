@@ -361,12 +361,15 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
+      gap: 1.1rem;
       padding: 2rem;
       opacity: .55;
     }
     .hani-card:hover, .hani-card:focus-visible, .is-hani .hani-card { opacity: 1; }
     .hani-card:focus-visible { outline: 2px solid #e9d9b6; outline-offset: -4px; }
     .hani-cover-type { position: relative; z-index: 1; padding: .7rem; background: rgba(12,20,35,.42); border-radius: 4px; text-shadow: 0 2px 9px #10243a; font-size: clamp(1.5rem, 4vw, 1.85rem); line-height: 1.38; letter-spacing: .015em; }
+    .hani-cover-author { position: relative; z-index: 1; color: #f4eee5; font-size: .95rem; letter-spacing: .12em; text-transform: uppercase; text-shadow: 0 2px 9px #10243a, 0 1px 3px #10243a; }
     .hani-peek-cue {
       position: absolute;
       left: 12px;
@@ -600,9 +603,10 @@
         </button>
         <a class="carousel-card hani-card" id="haniCard"
            href="/the-tiny-blue-star/#hani"
-           aria-label="Preview Hani the Great, Windcatcher of Jedo — coming soon">
+           aria-label="Preview Hani the Great, Windcatcher of Jedo by MPK Jensen — coming soon">
           <span class="hani-peek-cue" aria-hidden="true">›</span>
           <span class="hani-cover-type">Hani the Great,<br>Windcatcher of Jedo</span>
+          <span class="hani-cover-author">MPK Jensen</span>
         </a>
       </div>
     </div>
