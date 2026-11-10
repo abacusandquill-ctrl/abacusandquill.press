@@ -354,7 +354,7 @@
     .is-hani .sandolo-card:hover, .is-hani .sandolo-card:focus-visible { opacity: 1; }
     .hani-card {
       border: 1px solid rgba(232,224,208,.32);
-      background: linear-gradient(135deg, #20232a 0%, #11151b 80%);
+      background: #30405b url('hani-air-panel.webp') center / cover no-repeat;
       color: #e8e0d0;
       text-align: center;
       text-decoration: none;
@@ -366,7 +366,7 @@
     }
     .hani-card:hover, .hani-card:focus-visible, .is-hani .hani-card { opacity: 1; }
     .hani-card:focus-visible { outline: 2px solid #e9d9b6; outline-offset: -4px; }
-    .hani-cover-type { font-size: clamp(1.5rem, 4vw, 1.85rem); line-height: 1.38; letter-spacing: .015em; }
+    .hani-cover-type { position: relative; z-index: 1; padding: .7rem; background: rgba(12,20,35,.42); border-radius: 4px; text-shadow: 0 2px 9px #10243a; font-size: clamp(1.5rem, 4vw, 1.85rem); line-height: 1.38; letter-spacing: .015em; }
     .hani-peek-cue {
       position: absolute;
       left: 12px;
